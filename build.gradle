@@ -16,6 +16,8 @@ buildscript {
 
 allprojects {
     repositories {
+        //配置 JitPack 插件的仓库地址
+        maven { url "https://jitpack.io" }
         google()
         jcenter()
         
