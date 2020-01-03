@@ -1,7 +1,12 @@
 apply plugin: 'java-library'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.anupamchugh'
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+
 }
 //  解决build 错误：编码GBK的不可映射字符
 tasks.withType(JavaCompile) {

@@ -1,4 +1,6 @@
 apply plugin: 'java-library'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.anupamchugh'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -6,6 +8,7 @@ dependencies {
     implementation 'com.google.auto.service:auto-service:1.0-rc6'
     annotationProcessor "com.google.auto.service:auto-service:1.0-rc6"
     implementation project(path: ':anno')
+
 }
 //  解决build 错误：编码GBK的不可映射字符
 tasks.withType(JavaCompile) {
