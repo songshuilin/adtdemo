@@ -40,7 +40,7 @@ public class MyAnnotationProcessor extends AbstractProcessor {
         MethodSpec methodSpec = MethodSpec.methodBuilder("getName")
                 .addModifiers(Modifier.PUBLIC)
                 .addParameter(String.class,"name")
-                .addStatement("new $T()", String.class)
+                .addStatement("$T.out.print($S)", System.class,"Hello")
                 .build();
 
         TypeSpec student = TypeSpec.classBuilder("Student")
